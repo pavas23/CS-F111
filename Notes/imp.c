@@ -34,7 +34,10 @@ int main()
     return 0;
 }
 
-/*the reason being when scanf returns it also have the carriage return in buffer which is a default case for the program and thus default is always executed. The way to mitigate it is to use a space before the %c in scanf and this does not happen with %d or %f as the buffer this is in the definition of input formatting of scanf while using %c, in order to avoid the '\n' in the input buffer. fflush stdin also does not work here because the buffer is locked by scanf. I got this info properly from IBMs documentation of scanf
+/*the reason being when scanf returns it also have the carriage return in buffer which is a default case for the program and thus default is always
+executed. The way to mitigate it is to use a space before the %c in scanf and this does not happen with %d or %f as the buffer this is in the definition
+of input formatting of scanf while using %c, in order to avoid the '\n' in the input buffer. fflush stdin also does not work here because the buffer
+is locked by scanf. I got this info properly from IBMs documentation of scanf
 https://www.ibm.com/docs/en/i/7.1?topic=functions-scanf-read-data
 this is the usage of scanf so whatever 'jugaad' we can think of, it is going to behave like this only!*/
 
@@ -79,7 +82,11 @@ int main()
     return 0;
 }
 
-/*this is a linux specific solution for the terminal x. actually terminals default system waits for a newline for getchar() this change happened from gcc11. in turboC this was not a problem in windows as conio.h saved the day. here you have to explicitly broadcast to the system to use the stty or input pipe (don't ask just google!) in raw mode rather than cooked or censored mode (censored keyword is cooked by me so please don't experiment with that!) and then change it back to cooked mode after you are done. this is necessary specially when you are using arrow keys to make a game.*/
+/*this is a linux specific solution for the terminal x. actually terminals default system waits for a newline for getchar() this change happened
+from gcc11. in turboC this was not a problem in windows as conio.h saved the day. here you have to explicitly broadcast to the system to use the
+stty or input pipe (don't ask just google!) in raw mode rather than cooked or censored mode (censored keyword is cooked by me so please don't
+experiment with that!) and then change it back to cooked mode after you are done. this is necessary specially when you are using arrow keys to make
+a game.*/
 
 /*Just an update: you don't need the system declaration here infact that is leading to erroneous result with backspace and enter in online gdb
 the code is changed a little, just omit those two lines*/
