@@ -1,4 +1,4 @@
-// --------------------------------------- 1st method --------------------------------------------------------
+// --------------------------------------- 1st method ----------------------------------------------------------------------------------------------------
 
 /*The problem that we have in class is due to the behaviour of scanf function, the following code is the one that works as intended:*/
 #include <stdio.h>
@@ -41,7 +41,7 @@ is locked by scanf. I got this info properly from IBMs documentation of scanf
 https://www.ibm.com/docs/en/i/7.1?topic=functions-scanf-read-data
 this is the usage of scanf so whatever 'jugaad' we can think of, it is going to behave like this only!*/
 
-// --------------------------------------- 2nd method --------------------------------------------------------
+// --------------------------------------- 2nd method -----------------------------------------------------------------------------------------------------
 
 // and if you want to use getchar() the way I was saying this will work
 
